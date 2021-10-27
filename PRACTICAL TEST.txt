@@ -1,0 +1,16 @@
+1)SELECT A.ProductName,C.CategoryName
+   FROM Products A
+   JOIN Suppliers B ON A.SupplierID=B.SupplierID
+   JOIN Categories C ON A.CategoryID=C.CategoryID
+   WHERE Suppliername='Tokyo Traders';
+
+
+
+
+
+
+2)SELECT A.CustomerID ,A.CustomerName,COUNT(B.OrderID) AS TORDERS FROM Customers A
+join Orders B on B.CustomerID =A.CustomerID
+GROUP BY CustomerID
+ORDER BY TORDERS DESC
+LIMIT 1;
